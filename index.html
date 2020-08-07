@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Hablador</title>
+</head>
+
+<body>
+    <div class="container my-4">
+        <h1 class="my-4 text-center">Amistades Charla</h1>
+        <!-- buttons for chatrooms -->
+        <div class="chat-rooms mb-3 text-center">
+            <div class="my-2">Choose a chatroom:</div>
+            <button class="btn" id="company">#Empresa</button>
+            <button class="btn" id="grants">#Fundos</button>
+            <button class="btn" id="community">#Comunidad</button>
+            <button class="btn" id="whatsUp">#Qué pasa</button>
+        </div>
+        <!-- chat list / window -->
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
+        </div>
+        <!-- new chat form -->
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                </div>
+                <input type="text" id="message" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="send">
+                </div>
+            </div>
+        </form>
+        <!-- update name form -->
+        <form class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Update name:</div>
+                </div>
+                <input type="text" id="name" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="update">
+                </div>
+            </div>
+            <div class="update-mssg"></div>
+        </form>
+        <br>
+        <br>
+    </div>
+
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCtEPHD8cd-GU1224cuWFWUx6R6uN934Rc",
+            authDomain: "amistades-charla.firebaseapp.com",
+            databaseURL: "https://amistades-charla.firebaseio.com",
+            projectId: "amistades-charla",
+            storageBucket: "amistades-charla.appspot.com",
+            messagingSenderId: "886937877511",
+            appId: "1:886937877511:web:610250df6f6b3de5b97ea2",
+            measurementId: "G-7LSPGSPXPV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+        const db = firebase.firestore()
+    </script>
+
+    <script src="chat.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

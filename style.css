@@ -1,0 +1,45 @@
+body {
+    background-image: url(Sunstone.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 600px;
+    color:goldenrod;
+    background-image: url(ollin.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 90%;
+    border-radius: 10px;
+    }
+  .btn{
+    background: #035749;
+    color: rgb(233, 235, 159);
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .btn:focus{
+    outline: none !important;
+  }
+
+.username{
+    font-weight: bold;
+}
+.time{
+    font-size: 0.7em;
+    color: #999;
+
+}
+
+.update-mssg {
+    text-align: center;
+    margin: 20pm auto;
+    color:gold;
+    font-weight: bold;
+
+}
+.input-group-text {
+    Color: #035749;
+    background: goldenrod;
+}
